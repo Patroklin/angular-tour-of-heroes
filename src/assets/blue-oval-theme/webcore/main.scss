@@ -1,0 +1,14 @@
+body {
+	main,
+	#app-content {
+		width: 100%;
+		// padding: 0 .25em;
+		flex: 1 0 auto;
+		@media screen and (min-width: $breakpoint-sm) {
+			// padding: 0 1em;
+		}
+	}
+	.ui-inputtext {
+		border: none;
+	}
+}

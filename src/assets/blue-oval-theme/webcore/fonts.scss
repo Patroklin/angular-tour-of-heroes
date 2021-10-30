@@ -1,0 +1,233 @@
+@import "variables";
+/*!
+ ******************************** [START] Ford Fonts *********************************
+ * This CSS resource incorporates links to font software which is the valuable copyrighted property of WebType LLC,
+ * The Font Bureau, Ascender Corporation and/or their suppliers. You may not attempt to copy, install, redistribute,
+ * convert, modify or reverse engineer this font software. Please contact WebType with any questions: http://www.webtype.com
+ */
+
+@font-face {
+	/* Ford Antenna Regular */
+	font-family: 'FordAntenna';
+	src: url($FordAntennaGUID + $WOFF2Postfix) format('woff2'), url($FordAntennaGUID + $WOFFPostfix) format('woff'),
+		url($FordAntennaGUID + $TTFPostfix) format('truetype');
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	/* Ford Antenna Bold */
+	font-family: 'FordAntenna';
+	src: url($FordAntennaBoldGUID + $WOFF2Postfix) format('woff2'),
+		url($FordAntennaBoldGUID + $WOFFPostfix) format('woff'),
+		url($FordAntennaBoldGUID + $TTFPostfix) format('truetype');
+	font-style: normal;
+	font-weight: 700;
+}
+
+@font-face {
+	/* Ford Antenna Regular Italic */
+	font-family: 'FordAntenna';
+	src: url($FordAntennaRegularItalicGUID + $WOFF2Postfix) format('woff2'),
+		url($FordAntennaRegularItalicGUID + $WOFFPostfix) format('woff'),
+		url($FordAntennaRegularItalicGUID + $TTFPostfix) format('truetype');
+	font-style: italic;
+	font-weight: 400;
+}
+
+@font-face {
+	/* Ford Antenna Bold Italic */
+	font-family: 'FordAntenna';
+	src: url($FordAntennaBoldItalicGUID + $WOFF2Postfix) format('woff2'),
+		url($FordAntennaBoldItalicGUID + $WOFFPostfix) format('woff'),
+		url($FordAntennaBoldItalicGUID + $TTFPostfix) format('truetype');
+	font-style: italic;
+	font-weight: 700;
+}
+
+@font-face {
+	/* Ford Antenna Medium */
+	font-family: 'FordAntennaMedium';
+	src: url($FordAntennaMediumGUID + $WOFF2Postfix) format('woff2'),
+		url($FordAntennaMediumGUID + $WOFFPostfix) format('woff'),
+		url($FordAntennaMediumGUID + $TTFPostfix) format('truetype');
+	font-style: normal;
+	font-weight: 500;
+}
+
+@font-face {
+	/* Ford Antenna Light */
+	font-family: 'FordAntennaLight';
+	src: url($FordAntennaLightGUID + $WOFF2Postfix) format('woff2'),
+		url($FordAntennaLightGUID + $WOFFPostfix) format('woff'),
+		url($FordAntennaLightGUID + $TTFPostfix) format('truetype');
+	font-style: normal;
+	font-weight: 300;
+}
+
+@font-face {
+	/* Ford Antenna Light Italic */
+	font-family: 'FordAntennaLight';
+	src: url($FordAntennaLightItalicGUID + $WOFF2Postfix) format('woff2'),
+		url($FordAntennaLightItalicGUID + $WOFFPostfix) format('woff'),
+		url($FordAntennaLightItalicGUID + $TTFPostfix) format('truetype');
+	font-style: italic;
+	font-weight: 300;
+}
+
+@font-face {
+	/* Ford Antenna Condensed Regular */
+	font-family: 'FordAntennaCond';
+	src: url($FordAntennaCondensedGUID + $WOFF2Postfix) format('woff2'),
+		url($FordAntennaCondensedGUID + $WOFFPostfix) format('woff'),
+		url($FordAntennaCondensedGUID + $TTFPostfix) format('truetype');
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	/* Ford Antenna Condensed Bold */
+	font-family: 'FordAntennaCond';
+	src: url($FordAntennaCondensedBoldGUID + $WOFF2Postfix) format('woff2'),
+		url($FordAntennaCondensedBoldGUID + $WOFFPostfix) format('woff'),
+		url($FordAntennaCondensedBoldGUID + $TTFPostfix) format('truetype');
+	font-style: normal;
+	font-weight: 700;
+}
+
+@font-face {
+	/* Ford Antenna Condensed Regular Italic */
+	font-family: 'FordAntennaCond';
+	src: url($FordAntennaCondensedRegularItalicGUID + $WOFF2Postfix) format('woff2'),
+		url($FordAntennaCondensedRegularItalicGUID + $WOFFPostfix) format('woff'),
+		url($FordAntennaCondensedRegularItalicGUID + $TTFPostfix) format('truetype');
+	font-style: italic;
+	font-weight: 400;
+}
+
+@font-face {
+	/* Ford Antenna Condensed Bold Italic */
+	font-family: 'FordAntennaCond';
+	src: url($FordAntennaCondensedBoldItalicGUID + $WOFF2Postfix) format('woff2'),
+		url($FordAntennaCondensedBoldItalicGUID + $WOFFPostfix) format('woff'),
+		url($FordAntennaCondensedBoldItalicGUID + $TTFPostfix) format('truetype');
+	font-style: italic;
+	font-weight: 700;
+}
+
+@font-face {
+	/* Ford Antenna Condensed Medium */
+	font-family: 'FordAntennaCondMed';
+	src: url($FordAntennaCondensedMediumGUID + $WOFF2Postfix) format('woff2'),
+		url($FordAntennaCondensedMediumGUID + $WOFFPostfix) format('woff'),
+		url($FordAntennaCondensedMediumGUID + $TTFPostfix) format('truetype');
+	font-style: normal;
+	font-weight: 500;
+}
+
+@font-face {
+	/* Ford Antenna Condensed Medium Italic*/
+	font-family: 'FordAntennaCondMed';
+	src: url($FordAntennaCondensedMediumItalicGUID + $WOFF2Postfix) format('woff2'),
+		url($FordAntennaCondensedMediumItalicGUID + $WOFFPostfix) format('woff'),
+		url($FordAntennaCondensedMediumItalicGUID + $TTFPostfix) format('truetype');
+	font-style: italic;
+	font-weight: 500;
+}
+/********************************* [END] Ford Fonts *********************************/
+
+/********************************* [START] OpenSans Fonts *********************************/
+@font-face {
+	/* Open Sans Bold */
+	font-family: 'OpenSansBold';
+	src: url($OpenSansBold + $WOFF2Postfix) format('woff2'), url($OpenSansBold + $WOFFPostfix) format('woff'),
+		url($OpenSansBold + $TTFPostfix) format('truetype');
+	font-style: normal;
+	font-weight: 700;
+}
+
+@font-face {
+	/* Open Sans Bold Italic */
+	font-family: 'OpenSansBoldItalic';
+	src: url($OpenSansBoldItalic + $WOFF2Postfix) format('woff2'),
+		url($OpenSansBoldItalic + $WOFFPostfix) format('woff'),
+		url($OpenSansBoldItalic + $TTFPostfix) format('truetype');
+	font-style: italic;
+	font-weight: 700;
+}
+
+@font-face {
+	/* Open Sans Extra Bold */
+	font-family: 'OpenSansCondBold';
+	src: url($OpenSansCondBold + $WOFF2Postfix) format('woff2'), url($OpenSansCondBold + $WOFFPostfix) format('woff'),
+		url($OpenSansCondBold + $TTFPostfix) format('truetype');
+	font-style: normal;
+	font-weight: 800;
+}
+
+@font-face {
+	/* Open Sans Extra Bold Italic */
+	font-family: 'OpenSansCondBoldItalic';
+	src: url($OpenSansCondBoldItalic + $WOFF2Postfix) format('woff2'),
+		url($OpenSansCondBoldItalic + $WOFFPostfix) format('woff'),
+		url($OpenSansCondBoldItalic + $TTFPostfix) format('truetype');
+	font-style: italic;
+	font-weight: 800;
+}
+
+@font-face {
+	/* Open Sans Italic */
+	font-family: 'OpenSansItalic';
+	src: url($OpenSansItalic + $WOFF2Postfix) format('woff2'), url($OpenSansItalic + $WOFFPostfix) format('woff'),
+		url($OpenSansItalic + $TTFPostfix) format('truetype');
+	font-style: italic;
+	font-weight: 400;
+}
+
+@font-face {
+	/* Open Sans Regular */
+	font-family: 'OpenSansRegular';
+	src: url($OpenSansRegular + $WOFF2Postfix) format('woff2'), url($OpenSansRegular + $WOFFPostfix) format('woff'),
+		url($OpenSansRegular + $TTFPostfix) format('truetype');
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	/* Open Sans Light */
+	font-family: 'OpenSansLight';
+	src: url($OpenSansLight + $WOFF2Postfix) format('woff2'), url($OpenSansLight + $WOFFPostfix) format('woff'),
+		url($OpenSansLight + $TTFPostfix) format('truetype');
+	font-style: normal;
+	font-weight: 300;
+}
+
+@font-face {
+	/* Open Sans Light Italic */
+	font-family: 'OpenSansLightItalic';
+	src: url($OpenSansLightItalic + $WOFF2Postfix) format('woff2'),
+		url($OpenSansLightItalic + $WOFFPostfix) format('woff'),
+		url($OpenSansLightItalic + $TTFPostfix) format('truetype');
+	font-style: italic;
+	font-weight: 300;
+}
+
+@font-face {
+	/* Open Sans SemiBold */
+	font-family: 'OpenSansSemiBold';
+	src: url($OpenSansSemiBold + $WOFF2Postfix) format('woff2'), url($OpenSansSemiBold + $WOFFPostfix) format('woff'),
+		url($OpenSansSemiBold + $TTFPostfix) format('truetype');
+	font-style: normal;
+	font-weight: 600;
+}
+
+@font-face {
+	/* Open Sans SemiBold Italic */
+	font-family: 'OpenSansSemiBoldItalic';
+	src: url($OpenSansSemiBoldItalic + $WOFF2Postfix) format('woff2'),
+		url($OpenSansSemiBoldItalic + $WOFFPostfix) format('woff'),
+		url($OpenSansSemiBoldItalic + $TTFPostfix) format('truetype');
+	font-style: italic;
+	font-weight: 600;
+}
+/********************************* [END] OpenSans Fonts *********************************/

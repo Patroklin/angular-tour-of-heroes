@@ -1,0 +1,29 @@
+body {
+	.ui-message {
+		.ui-message-text {
+			padding-left: 0.5em;
+			&:empty {
+				padding-left: 0;
+			}
+		}
+	}
+
+	//.ui-toast is overridden from primeng itself
+	.ui-toast {
+		.ui-toast-message {
+			font-size: 14px;
+		}
+
+		.ui-toast-close-icon {
+			text-decoration: none;
+		}
+
+		@media screen and (min-width: $breakpoint-xs) {
+			width: 25em;
+
+			.ui-toast-message {
+				font-size: 20px;
+			}
+		}
+	}
+}

@@ -1,0 +1,80 @@
+//adding display block to all block level tag so IE can work
+article,
+aside,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+	display: block;
+}
+
+body {
+	font-family: $fontFamilyDefault;
+	color: $title-blue;
+	font-style: normal;
+	font-weight: 400;
+	margin: 0 auto;
+	// max-width: 1440px;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	.pi {
+		font-size: 1em;
+	}
+	.wrapper {
+		width: 1366px;
+		max-width: 1366px;
+		margin: 0 auto;
+	}
+	// adjust margin for font awesome icons only
+	// adjusting margin on all i tags affects prime icons rendering in primeng components
+	i.fas,
+	i.far,
+	i.fal,
+	i.fad,
+	i.fab {
+		margin-right: 0.4em;
+	}
+	a {
+		cursor: pointer;
+		color: $text-accor-blue;
+		text-decoration: underline;
+	}
+	span {
+		&.checkbox {
+			border: 1px solid $border-gray-search;
+			background-color: white;
+			display: flex;
+			height: 24px;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 24px;
+			z-index: 0;
+		}
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+@media print {
+	.hide-print {
+		display: none;
+	}
+	.show-print {
+		display: block !important;
+	}
+}
+
+.hide-screen {
+	display: none;
+}

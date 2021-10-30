@@ -1,0 +1,136 @@
+/* override PrimeNG theme font family */
+
+$fontFamilyDefault: 'OpenSansRegular', Arial, Helvetica, sans-serif;
+$fontFamily: $fontFamilyDefault;
+$fontFamilyFordAntenna: FordAntenna, Arial, Helvetica, sans-serif;
+$fontFamilyFordAntennaLight: FordAntennaLight, Arial, Helvetica, sans-serif;
+$fontFamilyFordAntennaCond: FordAntennaCond, Arial, Helvetica, sans-serif;
+
+/*Font paths with obfuscated names from WebType*/
+
+// note: due to scss import syntax, these urls deliberately do not match the location of this file.
+// instead, they need to be formed as a url for where the fonts.scss file is imported.
+$FontDirectory: 'fonts/';
+$FordAntennaGUID: $FontDirectory + 'Ford-Antenna-Regular/a3a5e8f2-b656-4837-8a16-f448f0edd2b8';
+$FordAntennaBoldGUID: $FontDirectory + 'Ford-Antenna-Bold/1f6002e2-42c0-4332-8629-1dad7eb882ca';
+$FordAntennaRegularItalicGUID: $FontDirectory + 'Ford-Antenna-Regular-Italic/d3619808-0ee3-4f20-84c5-1cca83dfec44';
+$FordAntennaBoldItalicGUID: $FontDirectory + 'Ford-Antenna-Bold-Italic/fb224575-dc8a-414f-8f22-034559e3bdba';
+$FordAntennaMediumGUID: $FontDirectory + 'Ford-Antenna-Medium/2b3c6cec-b81d-4903-89a0-aa111b549094';
+$FordAntennaLightGUID: $FontDirectory + 'Ford-Antenna-Light/11f33cf4-3e86-4d2b-b2df-9e2ae91ba4b5';
+$FordAntennaLightItalicGUID: $FontDirectory + 'Ford-Antenna-Light-Italic/2f230fc8-026f-4a1a-82f5-2f116e1e5853';
+$FordAntennaCondensedGUID: $FontDirectory + 'Ford-Antenna-Cond-Regular/328c7edc-c164-4098-aa60-405620c7d1dd';
+$FordAntennaCondensedBoldGUID: $FontDirectory + 'Ford-Antenna-Cond-Bold/3528ac26-02ec-4e01-a488-8831ab9bd963';
+$FordAntennaCondensedRegularItalicGUID: $FontDirectory +
+	'Ford-Antenna-Cond-Regular-Italic/6d453efb-6fc1-43ae-b9f7-704e5d3b4c09';
+$FordAntennaCondensedBoldItalicGUID: $FontDirectory +
+	'Ford-Antenna-Cond-Bold-Italic/84eb87b4-c7d9-4258-8efd-58c9ad5689d9';
+$FordAntennaCondensedMediumGUID: $FontDirectory + 'Ford-Antenna-Cond-Medium/cd001810-535d-4e5a-b707-6799a4953db8';
+$FordAntennaCondensedMediumItalicGUID: $FontDirectory +
+	'Ford-Antenna-Cond-Medium-Italic/768635c0-3484-4e43-b5bb-1fab81563224';
+$OpenSansBold: $FontDirectory + 'OpenSans-Bold/OpenSans-Bold';
+$OpenSansBoldItalic: $FontDirectory + 'OpenSans-Bold-Italic/OpenSans-BoldItalic';
+$OpenSansCondBold: $FontDirectory + 'OpenSans-Cond-Bold/OpenSans-ExtraBold';
+$OpenSansCondBoldItalic: $FontDirectory + 'OpenSans-Cond-Bold-Italic/OpenSans-ExtraBoldItalic';
+$OpenSansLight: $FontDirectory + 'OpenSans-Light/OpenSans-Light';
+$OpenSansLightItalic: $FontDirectory + 'OpenSans-Light-Italic/OpenSans-LightItalic';
+$OpenSansItalic: $FontDirectory + 'OpenSans-Italic/OpenSans-Italic';
+$OpenSansRegular: $FontDirectory + 'OpenSans-Regular/OpenSans-Regular';
+$OpenSansSemiBold: $FontDirectory + 'OpenSans-SemiBold/OpenSans-SemiBold';
+$OpenSansSemiBoldItalic: $FontDirectory + 'OpenSans-SemiBold-Italic/OpenSans-SemiBoldItalic';
+$icomoon: $FontDirectory + 'Icomoon/icomoon';
+$WOFF2Postfix: '-5.woff2';
+$WOFFPostfix: '-3.woff';
+$TTFPostfix: '-1.ttf';
+
+/* Color Palette
+-------------------------------------------------- */
+
+/*ui component Colors coming from the WCAG 2.0 AA Accessibility Compliance guide from GTB*/
+
+/* Backgrounds */
+
+/* Blue */
+
+$ford-blue: #102b4e;
+$uniting-blue: #2861a4;
+$title-blue: #425968;
+$text-accor-blue: #2d96cd;
+$text-accor-blue-strong: #2680ae;
+$textInfo: #2d96cd;
+
+/* Gray */
+
+$light-gray: #f2f2f2;
+$lighter-mid-gray: #8c8c8c;
+$mid-gray: #6e6e6e;
+$dark-gray: #425968;
+$light-gray-background: #f7f7f7;
+$border-gray: #707070;
+$bg-soft-grey: #fafbfc;
+$bg-accor-grey: #ecf1f7;
+$bg-soft-grey-overlay: #f6f8fa;
+$border-gray-search: #dfe3eb;
+$border-gary-overlay: #dbdbdb;
+$placeholder-gray: #b3bdc3;
+$line-mid-gray: #ecebeb;
+
+/* Pink */
+
+$soft-pink: #f5e7e9;
+
+/* table even row color - NOTE - This deviates from the style guide, we needed a darker color for
+	the sake of visibility and differentiation between even and odd rows of a table. */
+
+$even-row-color: #f1f1f1;
+
+/* Text and Icons */
+
+/* CTA Colors */
+
+$CTA-dark-cyan: #0276b3;
+$CTA-light-cyan: #37a9e8;
+$CTA-icon-cyan: #2096cd;
+
+/* Icon red */
+
+$red-icon-country: #db1616;
+
+/* Text Dark */
+
+$charcoal: #333333;
+
+/* Text Light */
+
+$white: #ffffff;
+
+/* Alerts */
+
+$dark-alert-red: #d62d14;
+$light-alert-red: lighten($dark-alert-red, 20%);
+$opacity-alert-red: #b5000580;
+$dark-alert-orange: #ba4e00;
+$light-alert-orange: lighten($dark-alert-orange, 20%);
+$dark-alert-green: #008200;
+$light-alert-green: lighten($dark-alert-green, 20%);
+
+/* Required Field star color */
+
+$red-star: $dark-alert-red;
+
+/* Responsive
+-------------------------------------------------- */
+
+/* Breakpoints */
+
+$breakpoint-xs: 480px !default;
+$breakpoint-sm: 576px !default;
+$breakpoint-md: 768px !default;
+$breakpoint-lg: 992px !default;
+$breakpoint-xl: 1200px !default;
+$breakpoint-gutter: 0.5em !default;
+
+/* Transitions */
+
+$app-header-font-transition: font-size 0.25s ease-in;
+$app-header-width-transition: max-width 0.25s ease-in;
+$app-header-margin-transition: margin-top 0.25s ease-in;

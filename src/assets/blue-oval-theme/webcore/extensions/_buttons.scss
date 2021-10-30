@@ -1,0 +1,100 @@
+body {
+	.ui-button {
+		box-shadow: inset 0 1em 1em rgba(0, 0, 0, 0.2), 0 0.2em 0.15em rgba(0, 0, 0, 0.2);
+		margin: 0.125em;
+
+		&:enabled:hover {
+			box-shadow: inset 0 1em 1em rgba(255, 255, 255, 0.2), 0 0.2em 0.15em rgba(0, 0, 0, 0.5);
+		}
+
+		&:enabled:focus {
+			box-shadow: inset 0 1em 1em rgba(255, 255, 255, 0.2), 0 0.2em 0.15em rgba(0, 0, 0, 0.5);
+			background-color: $primaryDarkColor;
+		}
+
+		&:enabled:active {
+			box-shadow: inset 0 1em 1em rgba(255, 255, 255, 0.2), 0 0.2em 0.15em rgba(0, 0, 0, 0.5);
+		}
+	}
+
+	.ui-togglebutton {
+		&:not(.ui-state-disabled):not(.ui-state-active):hover {
+			box-shadow: inset 0 1em 1em rgba(255, 255, 255, 0.2), 0 0.2em 0.15em rgba(0, 0, 0, 0.5);
+		}
+
+		&:not(.ui-state-disabled):not(.ui-state-active).ui-state-focus {
+			box-shadow: inset 0 1em 1em rgba(255, 255, 255, 0.2), 0 0.2em 0.15em rgba(0, 0, 0, 0.5);
+		}
+
+		&.ui-state-active {
+			box-shadow: inset 0 1em 1em rgba(255, 255, 255, 0.2), 0 0.2em 0.15em rgba(0, 0, 0, 0.5);
+
+			&:hover {
+				box-shadow: inset 0 1em 1em rgba(255, 255, 255, 0.2), 0 0.2em 0.15em rgba(0, 0, 0, 0.5);
+			}
+
+			&.ui-state-focus {
+				box-shadow: inset 0 1em 1em rgba(255, 255, 255, 0.2), 0 0.2em 0.15em rgba(0, 0, 0, 0.5);
+			}
+		}
+	}
+
+	.ui-selectbutton {
+		.ui-button {
+			&:not(.ui-state-disabled):not(.ui-state-active):hover {
+				box-shadow: inset 0 1em 1em rgba(255, 255, 255, 0.2), 0 0.2em 0.15em rgba(0, 0, 0, 0.5);
+			}
+
+			&:not(.ui-state-disabled):not(.ui-state-active).ui-state-focus {
+				box-shadow: inset 0 1em 1em rgba(255, 255, 255, 0.2), 0 0.2em 0.15em rgba(0, 0, 0, 0.5);
+			}
+
+			&.ui-state-active {
+				box-shadow: inset 0 1em 1em rgba(255, 255, 255, 0.2), 0 0.2em 0.15em rgba(0, 0, 0, 0.5);
+
+				&:not(.ui-state-disabled):hover {
+					box-shadow: inset 0 1em 1em rgba(255, 255, 255, 0.2), 0 0.2em 0.15em rgba(0, 0, 0, 0.5);
+				}
+
+				&.ui-state-focus {
+					box-shadow: inset 0 1em 1em rgba(255, 255, 255, 0.2), 0 0.2em 0.15em rgba(0, 0, 0, 0.5);
+				}
+			}
+		}
+	}
+
+	.ui-button.ui-state-default.ui-button-secondary,
+	.ui-buttonset.ui-button-secondary > .ui-button.ui-state-default {
+		&:enabled:focus {
+			background-color: $secondaryButtonHoverBgColor;
+		}
+	}
+
+	.ui-button.ui-state-default.ui-button-info,
+	.ui-buttonset.ui-button-info > .ui-button.ui-state-default {
+		&:enabled:focus {
+			background-color: $infoButtonHoverBgColor;
+		}
+	}
+
+	.ui-button.ui-state-default.ui-button-success,
+	.ui-buttonset.ui-button-success > .ui-button.ui-state-default {
+		&:enabled:focus {
+			background-color: $successButtonBgColor;
+		}
+	}
+
+	.ui-button.ui-state-default.ui-button-warning,
+	.ui-buttonset.ui-button-warning > .ui-button.ui-state-default {
+		&:enabled:focus {
+			background-color: $warningButtonBgColor;
+		}
+	}
+
+	.ui-button.ui-state-default.ui-button-danger,
+	.ui-buttonset.ui-button-danger > .ui-button.ui-state-default {
+		&:enabled:focus {
+			background-color: $dark-alert-red;
+		}
+	}
+}

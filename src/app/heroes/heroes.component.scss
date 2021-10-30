@@ -1,0 +1,48 @@
+@import "variables";
+
+.card-header__heroe--ford-blue{
+  color: $ford-blue;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.input-group-text__heroe{
+  min-width: 128px;
+}
+
+.container__heroes{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.container__heroe{
+ width: 40%;
+}
+
+
+.list-group-item__heroe{
+  color: $uniting-blue;
+  font-size: 125%;
+  margin: 0.5em;
+}
+
+.card__heroe {
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+  font-size: 1.2em;
+  cursor: pointer;
+
+  &:hover {
+    color: $textInfo;
+    transition: all 0.2s;
+  }
+
+  &--ford-blue {
+    color: $uniting-blue;
+  }
+  &--selected {
+    color: $line-mid-gray;
+    background: $dark-gray;
+  }
+}

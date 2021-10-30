@@ -1,0 +1,131 @@
+body {
+	.ui-steps {
+		@media screen and (min-width: $breakpoint-sm) {
+			&:before {
+				top: 34px;
+			}
+		}
+
+		.ui-steps-item {
+			.ui-menuitem-link {
+				@media screen and (min-width: $breakpoint-md) {
+					.ui-steps-title {
+						display: block;
+					}
+				}
+			}
+		}
+
+		.ui-steps-item {
+			&.ui-state-disabled {
+				opacity: 1;
+				.ui-steps-number {
+					color: $textColor;
+				}
+			}
+		}
+	}
+
+	.ui-menu {
+		background-color: $white;
+
+		.ui-menuitem-link {
+			.ui-menuitem-text,
+			.ui-menuitem-icon {
+				color: $textColor;
+			}
+
+			&.ui-state-active {
+				.ui-menuitem-text {
+					color: $menuitemTextColor;
+				}
+			}
+
+			&:hover {
+				background-color: $primaryDarkColor;
+
+				.ui-menuitem-text {
+					color: $menuitemTextColor;
+				}
+			}
+		}
+	}
+
+	.ui-menubar {
+		font-family: $fontFamilyFordAntennaLight;
+
+		.ui-menuitem {
+			&.ui-menuitem-active {
+				> .ui-menuitem-link {
+					background-color: $primaryDarkColor;
+				}
+			}
+		}
+
+		a {
+			&.user-info {
+				color: $primaryTextColor;
+			}
+		}
+
+		.ui-menubar-custom {
+			.user-info {
+				float: right;
+				margin-right: 1em;
+				margin-top: 0.8em;
+				color: $primaryTextColor;
+			}
+		}
+
+		.ui-submenu-list {
+			background-color: $white;
+
+			.ui-menuitem-link {
+				.ui-menuitem-text,
+				.ui-menuitem-icon {
+					color: $charcoal;
+				}
+			}
+
+			.ui-menuitem.ui-menuitem-active > .ui-menuitem-link .ui-menuitem-text,
+			.ui-menuitem-link:hover .ui-menuitem-text {
+				color: $primaryTextColor;
+			}
+		}
+	}
+
+	.ui-panelmenu {
+		.ui-panelmenu-header {
+			font-family: $fontFamilyFordAntenna;
+			> a,
+			.ui-state-active > a,
+			:not(.ui-state-active) > a,
+			:not(.ui-state-active) > a:hover {
+				border-top: 1px solid $mid-gray;
+				border-bottom: 1px solid $mid-gray;
+				border-left: none !important;
+				border-right: none !important;
+			}
+		}
+
+		.ui-panelmenu-content {
+			background-color: $white;
+			border: none;
+			font-family: $fontFamilyFordAntennaLight;
+
+			.ui-menuitem {
+				border-radius: 0;
+
+				.ui-menuitem-link {
+					color: $textColor;
+					border-radius: 0;
+
+					&.ui-state-active {
+						background-color: $primaryDarkColor;
+						color: $primaryTextColor;
+					}
+				}
+			}
+		}
+	}
+}

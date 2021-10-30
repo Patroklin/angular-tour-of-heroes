@@ -1,0 +1,44 @@
+body {
+	.ui-confirmdialog {
+		width: 35em;
+		&.ui-dialog {
+			.ui-dialog-content {
+				border: none;
+				display: flex;
+				padding: 1em;
+
+				.ui-confirmdialog-icon,
+				.ui-confirmdialog-message {
+					flex: 0 0 auto;
+					display: block;
+				}
+				.ui-confirmdialog-message {
+					width: 100%;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 40em) {
+		.ui-confirmdialog {
+			width: 90%;
+			max-width: 35em;
+		}
+	}
+	.ui-dialog {
+		.ui-dialog-titlebar,
+		.ui-dialog-footer {
+			border: none;
+		}
+	}
+
+	.ui-sidebar {
+		padding: 0;
+
+		// side bar close icon color
+		.ui-sidebar-close {
+			color: $primaryDarkerColor;
+			font-size: 1.7em;
+			padding: 0.125em 0.25em;
+		}
+	}
+}

@@ -1,0 +1,39 @@
+body {
+	.btn-sidebar {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		button {
+			background: none;
+			color: $ford-blue;
+			&:enabled {
+				&:focus {
+					box-shadow: none;
+				}
+			}
+		}
+
+		.ui-button {
+			border: none;
+			box-shadow: none;
+			&:hover {
+				border: none !important;
+				box-shadow: none !important;
+				background: $white !important;
+				color: $primaryDarkColor !important;
+
+				.ui-button-icon-left {
+					transform: scale(1.125);
+					transition: transform 0.1s ease-in-out;
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: $breakpoint-md) {
+		.btn-sidebar {
+			display: none;
+		}
+	}
+}

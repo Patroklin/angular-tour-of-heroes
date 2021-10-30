@@ -1,0 +1,66 @@
+body {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 0 0 0.5em;
+	}
+
+	h1,
+	.h1,
+	h2,
+	.h2,
+	h3,
+	.h3,
+	h4,
+	.h4 {
+		font-family: $fontFamilyFordAntennaCond;
+		font-style: normal;
+		font-weight: 400;
+	}
+
+	h5,
+	.h5,
+	h6,
+	.h6 {
+		font-family: $fontFamilyFordAntenna;
+		font-style: normal;
+		font-weight: 400;
+	}
+
+	h1,
+	h2 {
+		margin-bottom: 0.41666em;
+	}
+
+	h3,
+	.h3 {
+		font-size: 1.18rem;
+	}
+
+	h4,
+	.h4 {
+		font-size: 1rem;
+	}
+
+	p {
+		margin: 0.5em;
+	}
+
+	hr {
+		margin-bottom: 1em;
+	}
+
+	a {
+		&:hover {
+			color: $primaryDarkColor;
+		}
+	}
+
+	hr {
+		border: 0;
+		border-top: 1px solid lighten($mid-gray, 25%);
+	}
+}

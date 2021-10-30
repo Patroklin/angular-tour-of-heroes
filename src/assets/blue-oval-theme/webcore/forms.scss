@@ -1,0 +1,120 @@
+body {
+	/* horizontal form styling datepicker */
+
+	input[type='text'],
+	input[type='number'],
+	textarea,
+	select {
+		padding: 0.3125em;
+		font-size: 1em;
+		width: 100%;
+	}
+
+	input[type='text'],
+	input[type='number'] {
+		border: 1px solid $mid-gray;
+		border-radius: 3px;
+		padding: 5px;
+	}
+
+	form {
+		// border-radius: 5px;
+		padding: 0;
+		// box-shadow: 0 1px 10px #ccc;
+
+		p-calendar {
+			.ui-calendar {
+				width: 100%;
+
+				input {
+					width: 80%;
+				}
+
+				.ui-calendar-button {
+					margin: 0 0.125px 0 0;
+				}
+			}
+		}
+
+		p-dropdown {
+			padding: 0;
+		}
+	}
+
+	/* Required field border red when there is a required msg */
+	p-autocomplete.ng-invalid.ng-touched > .ui-autocomplete > .ui-inputtext,
+	input.ng-dirty.ng-invalid.ng-touched,
+	input.ng-invalid.ng-touched,
+	input.ng-invalid.ng-touched.ui-inputtext,
+	input.ng-invalid.ng-touched.ui-inputtext:hover,
+	p-dropdown.ng-invalid.ng-touched .ui-dropdown,
+	p-dropdown.ng-invalid.ng-dirty .ui-dropdown,
+	p-calendar.ng-invalid.ng-touched .ui-calendar input,
+	p-calendar.ng-invalid.ng-touched .ui-calendar .ui-inputtext {
+		border: $inputErrorBorder;
+	}
+
+	fieldset {
+		padding: 0;
+		margin: 0;
+		border: 0;
+
+		legend {
+			font-weight: 700;
+			font-size: 1rem;
+		}
+	}
+
+	// labels unlike the legend tag do not always have an associated fieldset
+	label {
+		font-weight: 700;
+		font-size: 1rem;
+	}
+
+	.form-actions {
+		// border-top for cancel and continue buttons on create booking page
+		border-top: 1px solid #e5e5e5;
+		padding: 1em;
+		margin: 0 -0.3125em 0.3125em -0.3125em;
+	}
+
+	p-dropdown {
+		&.inline-dropdown-pad {
+			padding-left: 0.5em;
+		}
+	}
+
+	.ui-dropdown {
+		&.form-dropdown {
+			width: 100% !important;
+		}
+	}
+
+	.ui-datepicker {
+		table {
+			td {
+				> a,
+				> span {
+					&:hover {
+						color: $primaryTextColor;
+					}
+				}
+			}
+		}
+	}
+
+	/* horizontal form styling */
+	.dl-horizontal dt {
+		text-align: right;
+		padding-right: 10px !important;
+	}
+
+	/*.required label:before,label.required:before,legend.required:before,*/
+	label.required-star:before,
+	legend.required-star:before {
+		color: $red-star;
+		content: ' * ';
+		display: inline;
+	}
+	/* end of horizontal form styling */
+}

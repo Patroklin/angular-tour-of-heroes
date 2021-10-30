@@ -1,0 +1,93 @@
+body {
+	.ui-paginator {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+
+		// This number comes directly from PrimeNG, it is not random, it is used multiple times in the component.
+		// For some reason the .ui-paginator-pages element doesn't include the height and this causes some problems with
+		// the other overrides we have in place.
+		.ui-paginator-pages {
+			height: 2.286em;
+		}
+
+		.ui-paginator-first,
+		.ui-paginator-prev,
+		.ui-paginator-next,
+		.ui-paginator-last {
+			border-radius: 3px;
+
+			&:not(.ui-state-disabled):not(.ui-state-active):hover {
+				box-shadow: inset 0 1em 1em rgba(255, 255, 255, 0.2), 0 0.2em 0.15em rgba(0, 0, 0, 0.5);
+			}
+		}
+
+		.ui-paginator-pages {
+			.ui-paginator-page {
+				border-radius: 3px;
+
+				&.ui-state-active {
+					box-shadow: inset 0 1em 1em rgba(0, 0, 0, 0.2), 0 0.2em 0.15em rgba(0, 0, 0, 0.2);
+				}
+
+				&:not(.ui-state-active):hover {
+					box-shadow: inset 0 1em 1em rgba(255, 255, 255, 0.2), 0 0.2em 0.15em rgba(0, 0, 0, 0.5);
+				}
+			}
+		}
+
+		.ui-dropdown {
+			border: $inputBorder;
+
+			.ui-dropdown-trigger {
+				.ui-dropdown-trigger-icon {
+					color: $textColor;
+				}
+			}
+
+			.ui-dropdown-label {
+				color: $textColor;
+			}
+
+			&:hover {
+				.ui-dropdown-label {
+					color: $textColor;
+				}
+
+				.ui-dropdown-trigger {
+					.ui-dropdown-trigger-icon {
+						transform: scale(1.1);
+						transition: transform 0.1s ease-in-out;
+					}
+				}
+			}
+		}
+	}
+
+	.ui-table {
+		.ui-table-caption,
+		.ui-table-summary {
+			background-color: $white;
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			border: none;
+
+			.ui-button {
+				font-weight: 400;
+			}
+		}
+	}
+
+	.ui-dataview {
+		.ui-dataview-header {
+			background-color: inherit;
+			border: 0;
+		}
+
+		.ui-dataview-content {
+			border: none;
+			padding: 0;
+		}
+	}
+}

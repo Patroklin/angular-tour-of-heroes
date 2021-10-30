@@ -1,0 +1,48 @@
+/*
+    WaME's blue-oval-theme is based on PrimeNG's Prime Designer API. This theme.scss file is the entry point.
+    From here, we include:
+      - The Prime Designer 'variables' file from the sample 'mytheme'
+      - The Prime Designer core scss
+      - The custom webcore overrides and extensions build by WaME
+      - Any custom extensions built by the app team
+   In a large number of cases, custom styles built by app teams can be added in component css/scss in the /src/app
+   folder. If deliberate overrides or changes are required to the theme itself, those changes should be made in the
+   extensions referenced team-extensions folder here in the theme.
+*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    WaME variables, does not override any Prime Designer variables, but extends
+    Not for App teams to edit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+@import 'webcore/variables'; // blue-oval-theme\webcore\variables.scss
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Original variables from Prime Designer, with WaME determined values.
+    App Teams are free to edit values if they want custom colors, sizing, etc.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+@import '_theme-variables'; // blue-oval-theme\_variables.scss
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Everything under Prime Designer
+    Not for App teams to edit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+//@import '../designer/_core';
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Everything under webcore, including overrides from the webcore/extensions folder
+    Only for WaME team to maintain and edit
+    Not for App Teams to edit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+@import 'webcore/_webcore'; // blue-oval-theme\webcore\_webcore.scss
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    App team overrides, includes everything from the team-extensions folder
+    team-extensions folder is where teams maintain any custom or
+    overriding rules they want above and beyond what we provide
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+@import '_extensions'; // blue-oval-theme\_extensions.scss

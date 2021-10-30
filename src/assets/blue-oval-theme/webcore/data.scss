@@ -1,0 +1,326 @@
+body {
+	.select-all-none {
+		padding: 0.5em;
+	}
+
+	.ui-paginator {
+		&.ui-paginator-top {
+			margin: 0.5em 0;
+			align-items: center;
+
+			.ui-paginator-right-content {
+				display: flex;
+				color: $textColor;
+			}
+
+			.ui-paginator-left-content {
+				display: flex;
+				color: $textColor;
+			}
+		}
+
+		&.ui-paginator-bottom {
+			margin: 0.5em 0;
+			align-items: center;
+
+			.ui-paginator-right-content {
+				display: flex;
+				color: $textColor;
+			}
+
+			.ui-paginator-left-content {
+				display: flex;
+				color: $textColor;
+			}
+		}
+
+		.ui-paginator-right-content {
+			margin-left: auto;
+		}
+
+		.ui-paginator-left-content {
+			margin-right: auto;
+
+			p-dropdown {
+				margin: 0;
+			}
+
+			.resultsPerPageSpan {
+				align-self: center;
+				margin-right: 0.25em;
+				font-weight: bold;
+			}
+		}
+
+		@media screen and (max-width: 579px) {
+			.ui-paginator-left-content {
+				flex-basis: 100%;
+			}
+
+			a {
+				&.ui-paginator-last {
+					&.ui-paginator-element {
+						margin-right: auto;
+					}
+				}
+			}
+			.ui-paginator-left-content {
+				.resultsPerPageDropdown {
+					margin-right: auto;
+				}
+			}
+			.resultsPerPageSpan {
+				margin-left: 0.7em;
+			}
+		}
+
+		@media screen and (max-width: 398px) {
+			a {
+				&.ui-paginator-first {
+					&.ui-paginator-element {
+						margin-left: auto;
+					}
+				}
+			}
+
+			.ui-paginator-right-content {
+				margin-right: auto;
+			}
+
+			.resultsPerPageSpan {
+				margin-left: auto;
+			}
+		}
+	}
+
+	.ui-table {
+		.ui-table-loading {
+			opacity: 1;
+		}
+
+		@media (min-width: $breakpoint-md) {
+			.ui-table-caption,
+			.ui-table-summary {
+				justify-content: space-between;
+				flex-wrap: nowrap;
+			}
+		}
+
+		&.ui-table-responsive {
+			.ui-table-thead > tr > th,
+			.ui-table-tbody > tr > td {
+				&[colspan='12'] {
+					background-color: $bg-soft-grey-overlay;
+					padding: 0;
+				}
+				&.table-checkbox {
+					padding: 0.25em;
+					width: 2.5em;
+					text-align: left;
+				}
+
+				@media screen and (min-width: $breakpoint-sm) {
+					&.table-checkbox {
+						padding: 0.25em;
+						width: 2.5em;
+						text-align: center;
+					}
+				}
+				// PrimeNG is ridiculous and has a max width breakpoint set on tables. This is backwards.
+				// We have to account for this in order for the classes to apply properly.
+				@media screen and (min-width: $breakpoint-sm) and (max-width: 40em) {
+					&.table-checkbox {
+						padding: 0.25em;
+						width: 2.5em;
+						text-align: left;
+					}
+				}
+			}
+
+			table {
+				table-layout: fixed;
+
+				.ui-table-thead {
+					> tr {
+						border-right: $tableHeaderCellBorder;
+						border-bottom: 0 none;
+
+						> th,
+						> td {
+							padding: 0.571em 0.35em;
+
+							&[class*='p-col'] {
+								border: 0 none;
+							}
+						}
+
+						@media screen and (min-width: $breakpoint-md) {
+							// border-top: $tableHeaderCellBorder;
+							// border-right: 0 none;
+							// border-bottom: 0 none;
+							// border-left: $tableHeaderCellBorder;
+							border: $tableHeaderCellBorder;
+							&.p-grid {
+								> th,
+								> td {
+									&[class*='p-col'] {
+										border-top: 0 none;
+										border-right: $tableHeaderCellBorder;
+										border-bottom: 0 none;
+										border-left: 0 none;
+										display: block;
+									}
+								}
+							}
+						}
+					}
+					.ui-header-vehiclePaymentStatus {
+						cursor: default;
+						&:hover {
+							color: $secondaryButtonActiveBorderColor;
+						}
+					}
+				}
+
+				.ui-table-tbody {
+					border: $tableBodyCellBorder;
+
+					> tr {
+						border-bottom: 0 none;
+
+						@media screen and (min-width: $breakpoint-md) {
+							&.p-grid {
+								//Trick to get flex items to have the same functionality as border-collapse:collapse, give border to parent (top, left) remove border from child (right, bottom)
+								border-top: $tableBodyCellBorder;
+								border-right: 0 none;
+								border-bottom: 0 none;
+								border-left: $tableBodyCellBorder;
+
+								> th,
+								> td {
+									&[class*='p-col'] {
+										//Trick to get flex items to have the same functionality as border-collapse:collapse, give border to parent (top, left) remove border from child (right, bottom)
+										border-top: 0 none;
+										border-right: $tableBodyCellBorder;
+										border-bottom: 0 none;
+										border-left: 0 none;
+										display: block;
+									}
+								}
+							}
+						}
+
+						> td {
+							/**
+							* For some reason in PrimeNG, the td widths on the responsive table are marked !important so they need to
+							* be overridden when combining with the flexgrid at the max-width 40em breakpoint.
+							*/
+							@media screen and (max-width: 40em) {
+								&.p-col-1 {
+									width: 8.3333% !important;
+								}
+								&.p-col-2 {
+									width: 16.6667% !important;
+								}
+								&.p-col-3 {
+									width: 25% !important;
+								}
+								&.p-col-4 {
+									width: 33.3333% !important;
+								}
+								&.p-col-5 {
+									width: 41.6667% !important;
+								}
+								&.p-col-6 {
+									width: 50% !important;
+								}
+								&.p-col-7 {
+									width: 58.3333% !important;
+								}
+								&.p-col-8 {
+									width: 66.6667% !important;
+								}
+								&.p-col-9 {
+									width: 75% !important;
+								}
+								&.p-col-10 {
+									width: 83.3333% !important;
+								}
+								&.p-col-11 {
+									width: 91.6667% !important;
+								}
+								&.p-col-12 {
+									width: 100% !important;
+								}
+							}
+						}
+					}
+				}
+
+				.ui-table-tfoot {
+					border-bottom: $tableFooterCellBorder;
+
+					a {
+						color: #ffffff;
+						text-decoration: underline;
+
+						&:active,
+						&:hover {
+							color: #ffffff;
+							text-decoration: underline;
+						}
+					}
+
+					> tr {
+						border: $tableFooterCellBorder;
+						border-bottom: 0 none;
+						@media screen and (min-width: $breakpoint-md) {
+							&.p-grid {
+								//Trick to get flex items to have the same functionality as border-collapse:collapse, give border to parent (top, left) remove border from child (right, bottom)
+								border-top: $tableFooterCellBorder;
+								border-right: 0 none;
+								border-bottom: 0 none;
+								border-left: $tableFooterCellBorder;
+
+								> th,
+								> td {
+									&[class*='p-col'] {
+										//Trick to get flex items to have the same functionality as border-collapse:collapse, give border to parent (top, left) remove border from child (right, bottom)
+										border-top: 0 none;
+										border-right: $tableFooterCellBorder;
+										border-bottom: 0 none;
+										border-left: 0 none;
+										display: block;
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.ui-column-title {
+					padding: 0.4em;
+					min-width: 30%;
+					margin: -0.4em 1em -0.4em -0.4em;
+					font-weight: bold;
+
+					&[class*='p-col'] {
+						padding: $breakpoint-gutter;
+						min-width: 0;
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+
+	table {
+		.ui-widget-content {
+			td {
+				&:first-child {
+					overflow: visible;
+				}
+			}
+		}
+	}
+}

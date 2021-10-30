@@ -1,0 +1,14 @@
+body {
+	.ui-sidebar {
+		overflow-y: auto;
+		border: none;
+
+		.user-info {
+			font-family: $fontFamilyFordAntenna;
+		}
+
+		.ui-sidebar-close {
+			margin-top: 0.2em;
+		}
+	}
+}

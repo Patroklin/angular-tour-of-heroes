@@ -1,0 +1,9 @@
+body {
+	footer,
+	#app-footer {
+		padding: 0.25em 1em;
+		width: 100%;
+		flex: 0 0 auto;
+		background-image: linear-gradient(to bottom, $light-gray-background 0, $white 100%);
+	}
+}

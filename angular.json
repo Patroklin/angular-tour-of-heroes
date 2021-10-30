@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "1169ee9c-68b4-4904-9ef1-20c044bbe357"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -31,9 +34,16 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "./src/styles.scss",
+              "./src/assets/blue-oval-theme/theme.scss",
+              "./node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-            "scripts": []
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/assets/blue-oval-theme", "src/assets/blue-oval-theme/webcore"]
+            },
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -99,8 +109,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "./src/styles.scss",
+              "./src/assets/blue-oval-theme/theme.scss",
+              "./node_modules/bootstrap/dist/css/bootstrap.css"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/assets/blue-oval-theme", "src/assets/blue-oval-theme/webcore"]
+            },
             "scripts": []
           }
         }

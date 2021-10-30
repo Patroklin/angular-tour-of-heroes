@@ -1,0 +1,48 @@
+body {
+	.ui-panel {
+		padding-bottom: 1em;
+		position: relative;
+		top: -48px;
+		margin: 0 1px -48px 1px;
+
+		.ui-panel-titlebar {
+			align-items: center;
+			padding: 0.571em;
+			background-color: transparent;
+			color: $primaryTextColor;
+			border: 0;
+			padding: 0;
+
+			.ui-panel-titlebar-icon {
+				color: $text-accor-blue;
+				display: flex;
+				flex: 0 0 auto;
+				outline: none;
+				text-decoration: none;
+				font-size: 16px;
+				width: 8.3333%;
+				padding: 14px 20px;
+				background-color: $bg-soft-grey-overlay;
+				border: 1px solid $border-gray-search;
+				border-bottom: 3px solid $border-gray-search;
+				border-radius: 0;
+				justify-content: center;
+
+				&:hover {
+					color: $text-accor-blue;
+				}
+			}
+		}
+
+		.ui-panel-content {
+			padding: 0;
+			background-color: $bg-soft-grey-overlay;
+			border: 1px solid $border-gray-search;
+			border-top: 0;
+		}
+
+		.ui-panel-footer {
+			padding: 0.571em;
+		}
+	}
+}

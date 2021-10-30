@@ -1,0 +1,13 @@
+@import "variables";
+
+.navbar {
+  justify-content: center;
+  border-bottom: .13em solid #ecebeb;
+  margin-bottom: 2em;
+}
+
+.navbar-brand--heroes {
+  color: $ford-blue;
+  font-family: $fontFamilyFordAntenna;
+  font-size: 250%;
+}

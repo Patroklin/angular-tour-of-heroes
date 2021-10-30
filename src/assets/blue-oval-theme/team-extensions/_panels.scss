@@ -1,0 +1,18 @@
+/*
+Provide any app specific custom or override panel rules you want
+above and beyond what Web Enablement provides in this file
+*/
+body {
+	app-inquiry {
+		.ui-tabview {
+			&.ui-tabview-top {
+				.ui-tabview-nav {
+					width: 91.6667%;
+					flex: 0 0 auto;
+					position: relative;
+					z-index: 2;
+				}
+			}
+		}
+	}
+}

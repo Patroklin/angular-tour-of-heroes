@@ -1,0 +1,60 @@
+body {
+	.ui-steps {
+		.ui-steps-item {
+			.ui-menuitem-link {
+				.ui-steps-number {
+					top: 8px;
+				}
+
+				.ui-steps-title {
+					white-space: unset;
+					margin-top: 0;
+					display: none;
+				}
+			}
+		}
+
+		&:before {
+			position: relative;
+			top: 29px;
+		}
+	}
+
+	.ui-menubar {
+		.ui-menuitem {
+			margin: 0;
+		}
+	}
+
+	.ui-panelmenu {
+		.ui-panelmenu-header {
+			> a {
+				.ui-panelmenu-icon {
+					float: right;
+				}
+			}
+
+			&:not(.ui-state-active) {
+				> a:hover {
+					background-color: $ford-blue;
+					color: $primaryTextColor;
+
+					.ui-panelmenu-icon {
+						color: $primaryTextColor;
+					}
+				}
+			}
+		}
+
+		.ui-panelmenu-panel {
+			margin-top: 0;
+			&:first-child {
+				margin-top: 40px;
+			}
+		}
+
+		.ui-panelmenu-icon {
+			float: right;
+		}
+	}
+}

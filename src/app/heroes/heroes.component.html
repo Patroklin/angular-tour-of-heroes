@@ -1,0 +1,22 @@
+<div class="container container__heroe">
+  <div *ngIf="selectedHero" class="card card__heroe">
+    <div class="card-header card-header__heroe--ford-blue">
+      <span>{{selectedHero.name | uppercase}} details</span>
+    </div>
+    <div class="card-body">
+      <div class="input-group mb-3">
+        <span class="input-group-text input-group-text__heroe">Hero Id</span>
+        <span class="form-control">{{selectedHero.id}}</span></div>
+      <div class="input-group mb-3">
+        <span class="input-group-text input-group-text__heroe">Hero name</span>
+        <input type="text" class="form-control" aria-label="name" [(ngModel)]="selectedHero.name" placeholder="name">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container container__heroes">
+  <div class="col-3 card__heroe card__heroe--ford-blue" *ngFor="let hero of heroes" (click)="onSelect(hero)"
+  [class.card__heroe--selected]="hero === selectedHero">
+    {{hero.name | uppercase}}
+  </div>
+</div>
