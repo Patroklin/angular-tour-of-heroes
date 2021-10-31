@@ -1,6 +1,11 @@
-<div class="container">
-  <div class="navbar navbar-expand-lg">
+<div class="container container__heroes">
+  <div class="navbar navbar-expand-lg container__heroes-header">
     <div class="navbar-brand navbar-brand--heroes">{{title}}</div>
   </div>
-  <app-heroes></app-heroes>
+  <div class="container__heroes-content">
+    <app-heroes></app-heroes>
+  </div>
+  <div class="container__heroes-footer">
+    <app-messages></app-messages>
+  </div>
 </div>

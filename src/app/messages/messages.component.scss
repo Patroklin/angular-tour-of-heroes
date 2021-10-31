@@ -1,0 +1,33 @@
+@import "variables";
+
+.footer {
+  margin: 0 auto;
+  max-width: 1366px;
+  background-image: linear-gradient(to bottom, $white 0, $white 100%) !important;
+  border-top: 0.16em solid $line-mid-gray;
+  font-size: 13px;
+  align-items: center;
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__message-title {
+    color: $ford-blue;
+    font-family: $fontFamilyFordAntenna;
+    font-size: 150%;
+    margin-right: 1em;
+  }
+
+  &__message-content {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__element {
+      margin: 2em;
+    }
+  }
+}
+
+

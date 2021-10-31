@@ -1,0 +1,11 @@
+<div class="footer__container">
+  <div class="col-1">
+    <span class="footer__message-title">Messages:</span>
+  </div>
+  <div class="col-9 footer__message-content">
+  <div class="footer__message-content__element" *ngFor="let message of messageService.messages">{{message}}</div>
+  </div>
+  <div class="col-2">
+    <button class="button-primary" (click)="messageService.clear()">Clear messages</button>
+  </div>
+</div>
