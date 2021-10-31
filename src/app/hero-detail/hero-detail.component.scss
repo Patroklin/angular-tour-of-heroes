@@ -1,0 +1,16 @@
+@import "variables";
+
+.container__heroe-detail{
+  width: 40%;
+  margin-bottom: 3em;
+}
+
+.input-group-text__heroe-detail{
+  min-width: 128px;
+}
+
+.card-header__heroe-detail{
+  color: $ford-blue;
+  font-size: 1.2em;
+  text-align: center;
+}
