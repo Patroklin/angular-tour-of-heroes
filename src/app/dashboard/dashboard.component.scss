@@ -1,0 +1,35 @@
+@import "variables";
+
+.container__dashboard{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.container-dashboard-hero-detail{
+  display: flex;
+  justify-content: center;
+}
+
+.card__dashboard {
+  margin: 1.5em;
+  font-size: 1.2em;
+  cursor: pointer;
+  text-align: center;
+
+  &:hover {
+    color: $textInfo;
+    transition: all 0.2s;
+  }
+
+  &--ford-blue {
+    border: 1px solid $text-accor-blue;
+    border-radius: 25px;
+    color: $uniting-blue;
+    max-width: 250px;
+  }
+
+  &--selected {
+    color: $textInfo;
+  }
+}

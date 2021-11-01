@@ -1,27 +1,13 @@
 @import "variables";
 
-.container__heroes{
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
+.container {
+  &__heroes-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
 
-.card__heroes {
-  margin-top: 0.5em;
-  margin-bottom: 1.5em;
-  font-size: 1.2em;
-  cursor: pointer;
-
-  &:hover {
-    color: $textInfo;
-    transition: all 0.2s;
-  }
-
-  &--ford-blue {
-    color: $uniting-blue;
-  }
-
-  &--selected {
-    color: $textInfo;
-  }
+.list-group-heroes-list{
+  min-width: 40%;
 }

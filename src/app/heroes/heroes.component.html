@@ -1,7 +1,9 @@
-<app-hero-detail [selectedHero]="selectedHero"></app-hero-detail>
-<div class="container container__heroes">
-  <div class="col-3 card__heroes card__heroes--ford-blue" *ngFor="let hero of heroes" (click)="onSelect(hero)"
-       [class.card__heroes--selected]="hero === selectedHero">
-    {{hero.name | uppercase}}
-  </div>
+<div class="container__heroes-list">
+  <ul class="list-group list-group-flush list-group-heroes-list">
+    <li class="list-group-item" *ngFor="let hero of heroes" (click)="onSelect(hero)"
+        [class.active]="hero === selectedHero">
+      {{hero.name | uppercase}}
+    </li>
+  </ul>
+  <app-hero-detail [selectedHero]="selectedHero"></app-hero-detail>
 </div>

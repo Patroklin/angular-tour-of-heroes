@@ -47,10 +47,11 @@ body {
 			cursor: pointer;
 			transition: all 0.2s;
 			letter-spacing: 2px;
-			&:hover {
-				background-color: $text-accor-blue-strong;
-				transition: all 0.2s;
-			}
+      min-width: 200px;
+      &:hover {
+        background-color: $text-accor-blue-strong;
+        transition: all 0.2s;
+      }
 		}
 		&.button-secondary {
 			font-family: 'FordAntennaMedium';
