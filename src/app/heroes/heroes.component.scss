@@ -2,6 +2,7 @@
 
 .container {
   &__heroes-list {
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -10,4 +11,12 @@
 
 .list-group-heroes-list{
   min-width: 40%;
+
+}
+
+.list-group-item{
+  &:hover {
+    color: $textInfo;
+    transition: all 0.2s;
+  }
 }
