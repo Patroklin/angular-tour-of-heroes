@@ -1,16 +1,20 @@
 <div class="container container__heroe-detail">
-  <div *ngIf="selectedHero" class="card">
-    <div class="card-header card-header__heroe-detail">
-      <span>{{selectedHero.name | uppercase}} details</span>
+    <div *ngIf="selectedHero$ | async as selHero" class="card">
+        <div class="card-header card-header__heroe-detail" [class.card-header__heroe-detail--flex]="!showCompleteMode">
+            <p>{{selHero.name | uppercase}} details</p>
+            <div *ngIf="heroId">
+                <button class="button-secondary" (click)="navigateTo('/detail/'.concat(selHero.id.toString()))">Complete View</button>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="input-group mb-3">
+                <span class="input-group-text input-group-text__heroe-detail">Hero Id</span>
+                <span class="form-control">{{selHero.id}}</span></div>
+            <div class="input-group mb-3">
+                <span class="input-group-text input-group-text__heroe-detail">Hero name</span>
+                <input type="text" class="form-control" aria-label="name" [(ngModel)]="selHero.name"
+                       placeholder="name">
+            </div>
+        </div>
     </div>
-    <div class="card-body">
-      <div class="input-group mb-3">
-        <span class="input-group-text input-group-text__heroe-detail">Hero Id</span>
-        <span class="form-control">{{selectedHero.id}}</span></div>
-      <div class="input-group mb-3">
-        <span class="input-group-text input-group-text__heroe-detail">Hero name</span>
-        <input type="text" class="form-control" aria-label="name" [(ngModel)]="selectedHero.name" placeholder="name">
-      </div>
-    </div>
-  </div>
 </div>

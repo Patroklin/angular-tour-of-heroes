@@ -1,5 +1,5 @@
-<div class="container-dashboard-hero-detail">
-  <app-hero-detail [selectedHero]="selectedHero"></app-hero-detail>
+<div class="container-dashboard-hero-detail" *ngIf="selectedHero">
+  <app-hero-detail [heroId]="selectedHero.id" [showCompleteMode]="false"></app-hero-detail>
 </div>
 <div class="container container__dashboard">
   <div class="col-3 card__dashboard card__dashboard--ford-blue" *ngFor="let hero of heroes" (click)="onSelect(hero)"
