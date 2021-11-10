@@ -3,7 +3,9 @@
         <div class="card-header card-header__heroe-detail" [class.card-header__heroe-detail--flex]="!showCompleteMode">
             <p>{{selHero.name | uppercase}} details</p>
             <div *ngIf="heroId">
-                <button class="button-secondary" (click)="navigateTo('/detail/'.concat(selHero.id.toString()))">Complete View</button>
+                <button class="button-secondary" (click)="navigateTo('/detail/'.concat(selHero.id.toString()))">Complete
+                    View
+                </button>
             </div>
         </div>
         <div class="card-body">
@@ -17,4 +19,8 @@
             </div>
         </div>
     </div>
+</div>
+<div *ngIf="!heroId" class="button-primary__back">
+    <button class="button-primary" (click)="goBack()">Go Back
+    </button>
 </div>

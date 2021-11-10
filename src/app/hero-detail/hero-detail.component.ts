@@ -51,4 +51,8 @@ export class HeroDetailComponent implements OnInit, OnChanges {
             this.selectedHero$ = this.getHero();
         }
     }
+
+    goBack() {
+        this.location.back();
+    }
 }

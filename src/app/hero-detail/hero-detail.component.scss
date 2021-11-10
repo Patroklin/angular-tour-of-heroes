@@ -1,8 +1,9 @@
 @import "variables";
 
 .container__heroe-detail{
-  min-width: 40%;
   margin-bottom: 3em;
+  display: flex;
+  justify-content: center;
 }
 
 .input-group-text__heroe-detail{
@@ -19,5 +20,14 @@
     align-content: center;
     justify-content: space-around;
     gap: 4em;
+  }
+}
+
+.button-primary{
+  &__back{
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+    margin-bottom: 3em;
   }
 }
