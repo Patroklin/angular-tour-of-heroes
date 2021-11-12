@@ -1,0 +1,25 @@
+@import "variables";
+
+.container-dashboard-hero-detail{
+  display: flex;
+  justify-content: center;
+}
+
+.card-header__heroe-detail{
+  color: $ford-blue;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.input-group-text__heroe-detail{
+  min-width: 128px;
+}
+
+.button-primary{
+  &__confirm{
+    display: flex;
+    justify-content: center;
+    min-width: auto;
+    margin-top: 3em;
+  }
+}

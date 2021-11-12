@@ -1,6 +1,8 @@
-.container{
-  &__heroes-navigation{
-    margin-bottom: 4em;
+.container {
+  display: flex;
+  margin-bottom: 4em;
+
+  &__heroes-navigation {
     display: flex;
     justify-content: flex-end;
     gap: 4em;

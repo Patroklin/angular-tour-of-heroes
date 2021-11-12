@@ -1,0 +1,17 @@
+<div class="container-dashboard-hero-detail">
+  <div>
+    <div class="card-header card-header__heroe-detail">
+      <p>New hero details</p>
+    </div>
+    <div class="card-body">
+      <div class="input-group mb-3">
+        <span class="input-group-text input-group-text__heroe-detail">Hero name</span>
+        <input type="text" class="form-control" aria-label="name"
+               placeholder="name" #heroName>
+      </div>
+      <div class="button-primary__confirm">
+        <button class="button-secondary" (click)="save(heroName.value); heroName.value=''">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

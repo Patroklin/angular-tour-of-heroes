@@ -1,5 +1,10 @@
-<div class="container container__heroes-navigation">
-  <button class="button-secondary" (click)="navigateTo('/heroes')">Heroes</button>
-  <button class="button-secondary" (click)="navigateTo('/dashboard')">Dashboard</button>
+<div class="container">
+  <div class="col-2">
+    <button class="button-secondary" (click)="navigateTo('/new')">New Heroe</button>
+  </div>
+  <div class="col-10 container__heroes-navigation">
+    <button class="button-secondary" (click)="navigateTo('/heroes')">Heroes</button>
+    <button class="button-secondary" (click)="navigateTo('/dashboard')">Dashboard</button>
+  </div>
 </div>
 
