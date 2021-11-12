@@ -5,5 +5,7 @@
       {{hero.name | uppercase}}
     </li>
   </ul>
-  <app-hero-detail *ngIf="selectedHero" [heroId]="selectedHero.id" [showCompleteMode]="false"></app-hero-detail>
+  <app-hero-detail *ngIf="selectedHero" [heroId]="selectedHero.id"
+                   [showCompleteMode]="false"
+  (heroChangeEvent)="getHeroes()"></app-hero-detail>
 </div>

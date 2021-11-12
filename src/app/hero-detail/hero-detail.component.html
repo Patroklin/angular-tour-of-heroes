@@ -1,26 +1,29 @@
 <div class="container container__heroe-detail">
-    <div *ngIf="selectedHero$ | async as selHero" class="card">
-        <div class="card-header card-header__heroe-detail" [class.card-header__heroe-detail--flex]="!showCompleteMode">
-            <p>{{selHero.name | uppercase}} details</p>
-            <div *ngIf="heroId">
-                <button class="button-secondary" (click)="navigateTo('/detail/'.concat(selHero.id.toString()))">Complete
-                    View
-                </button>
-            </div>
-        </div>
-        <div class="card-body">
-            <div class="input-group mb-3">
-                <span class="input-group-text input-group-text__heroe-detail">Hero Id</span>
-                <span class="form-control">{{selHero.id}}</span></div>
-            <div class="input-group mb-3">
-                <span class="input-group-text input-group-text__heroe-detail">Hero name</span>
-                <input type="text" class="form-control" aria-label="name" [(ngModel)]="selHero.name"
-                       placeholder="name">
-            </div>
-        </div>
+  <div *ngIf="selectedHero$ | async as selHero" class="card">
+    <div class="card-header card-header__heroe-detail" [class.card-header__heroe-detail--flex]="!showCompleteMode">
+      <p>{{selHero.name | uppercase}} details</p>
+      <div *ngIf="heroId">
+        <button class="button-secondary" (click)="navigateTo('/detail/'.concat(selHero.id.toString()))">Complete
+          View
+        </button>
+      </div>
     </div>
+    <div class="card-body">
+      <div class="input-group mb-3">
+        <span class="input-group-text input-group-text__heroe-detail">Hero Id</span>
+        <span class="form-control">{{selHero.id}}</span></div>
+      <div class="input-group mb-3">
+        <span class="input-group-text input-group-text__heroe-detail">Hero name</span>
+        <input type="text" class="form-control" aria-label="name" [(ngModel)]="selHero.name"
+               placeholder="name">
+      </div>
+      <div class="button-primary__confirm">
+        <button class="button-secondary" (click)="save(selHero)">Save</button>
+      </div>
+    </div>
+  </div>
 </div>
-<div *ngIf="!heroId" class="button-primary__back">
-    <button class="button-primary" (click)="goBack()">Go Back
-    </button>
+<div *ngIf="((!heroId) && (selectedHero$ | async))" class="button-primary__back">
+  <button class="button-primary" (click)="goBack()">Go Back
+  </button>
 </div>

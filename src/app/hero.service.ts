@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {Hero} from "./hero";
 import {Observable, of} from "rxjs";
 import {MessageService} from "./message.service";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {catchError, tap} from "rxjs/operators";
 
 @Injectable({
@@ -47,4 +47,15 @@ export class HeroService {
     private log(message: string) {
         this.messageService.add(`HeroService: ${message}`)
     }
+
+  updateHero(hero: Hero): Observable<any> {
+      let httpOptions = {
+        headers: new HttpHeaders({'Content type' : 'application/json'})
+      }
+    return this.http.put(this.heroesUrl, hero, httpOptions)
+      .pipe(
+        tap(_ => this.log(`updated hero id=${hero.id}`)),
+        catchError(this.handleError<any>('updateHero'))
+      );
+  }
 }

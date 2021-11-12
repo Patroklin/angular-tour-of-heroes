@@ -30,4 +30,9 @@
     margin-top: 3em;
     margin-bottom: 3em;
   }
+  &__confirm{
+    display: flex;
+    justify-content: center;
+    min-width: auto;
+  }
 }
