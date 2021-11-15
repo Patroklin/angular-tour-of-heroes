@@ -2,8 +2,17 @@
   <app-hero-detail [heroId]="selectedHero.id" [showCompleteMode]="false" (heroChangeEvent)="getHeroes()"></app-hero-detail>
 </div>
 <div class="container container__dashboard">
-  <div class="col-3 card__dashboard card__dashboard--ford-blue" *ngFor="let hero of heroes" (click)="onSelect(hero)"
+  <div class="col-3 card__dashboard card__dashboard--ford-blue" *ngFor="let hero of heroes"
        [class.card__heroes--selected]="hero === selectedHero">
-    {{hero.name | uppercase}}
+    <div class="col-5 ford-text-align-left" (click)="onSelect(hero)">
+      {{hero.name | uppercase}}
+    </div>
+    <div class="col-4" (click)="onSelect(hero)"></div>
+    <div class="col-1 ford-text-align-right" (click)="removeHero(hero)">
+      X
+    </div>
+    <div>
+
+    </div>
   </div>
 </div>

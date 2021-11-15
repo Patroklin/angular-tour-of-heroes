@@ -2,7 +2,13 @@
   <ul class="list-group list-group-flush list-group-heroes-list">
     <li class="list-group-item" *ngFor="let hero of heroes" (click)="onSelect(hero)"
         [class.active]="hero === selectedHero">
-      {{hero.name | uppercase}}
+      <div class="col-5 ford-text-align-left" (click)="onSelect(hero)">
+        {{hero.name | uppercase}}
+      </div>
+      <div class="col-4" (click)="onSelect(hero)"></div>
+      <div class="col-1 ford-text-align-right" (click)="removeHero(hero)">
+        X
+      </div>
     </li>
   </ul>
   <app-hero-detail *ngIf="selectedHero" [heroId]="selectedHero.id"

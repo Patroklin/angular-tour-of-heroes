@@ -1,12 +1,12 @@
 @import "variables";
 
-.container__dashboard{
+.container__dashboard {
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
 }
 
-.container-dashboard-hero-detail{
+.container-dashboard-hero-detail {
   display: flex;
   justify-content: center;
 }
@@ -23,6 +23,7 @@
   }
 
   &--ford-blue {
+    display: flex;
     border: 1px solid $text-accor-blue;
     border-radius: 25px;
     color: $uniting-blue;
@@ -31,5 +32,20 @@
 
   &--selected {
     color: $textInfo;
+  }
+}
+
+.ford-text-align-left {
+  text-align: left;
+  margin-left: 1em;
+}
+
+.ford-text-align-right {
+  text-align: center;
+  margin-right: 1em;
+  &:hover {
+    color: $red-icon-country;
+    background: $light-gray;
+    transition: all 0.2s;
   }
 }
