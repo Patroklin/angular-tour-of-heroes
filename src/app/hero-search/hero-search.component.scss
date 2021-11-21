@@ -1,0 +1,12 @@
+.container{
+  &__search-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__search-input{
+    max-width: 20em;
+    margin: 1em;
+  }
+}

@@ -4,6 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
+  justify-content: center;
 }
 
 .container-dashboard-hero-detail {
@@ -43,9 +44,4 @@
 .ford-text-align-right {
   text-align: center;
   margin-right: 1em;
-  &:hover {
-    color: $red-icon-country;
-    background: $light-gray;
-    transition: all 0.2s;
-  }
 }

@@ -6,9 +6,8 @@
         {{hero.name | uppercase}}
       </div>
       <div class="col-4" (click)="onSelect(hero)"></div>
-      <div class="col-1 ford-text-align-right" (click)="removeHero(hero)">
-        X
-      </div>
+      <button class="col-1 ford-text-align-right btn-close" (click)="removeHero(hero)">
+      </button>
     </li>
   </ul>
   <app-hero-detail *ngIf="selectedHero" [heroId]="selectedHero.id"
