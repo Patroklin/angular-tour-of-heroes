@@ -1,13 +1,18 @@
 <div class="container container__search-box">
-  <label for="search-box">Search Hero</label>
-  <input class="container__search-input"
-         type="text"
-         id="search-box"
-         #searchTerm
-         (input)="search(searchTerm.value)">
+    <label for="search-box">Search Hero</label>
+    <input class="container__search-input"
+           type="text"
+           id="search-box"
+           #searchTerm
+           (input)="search(searchTerm.value)">
 
-  <ul class="list-group">
-
-  </ul>
 </div>
-
+<div class="container container__search-box">
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let hero of heroes$ | async">
+            <a routerLink="/detail/{{hero.id}}">
+                {{hero.name}}
+            </a>
+        </li>
+    </ul>
+</div>
